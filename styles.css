@@ -1,38 +1,42 @@
-/* General body styles with the background */
+/* General body styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
+    /* Modern and clean font */
     background: url('images/background.png') no-repeat center center fixed;
-    /* Background image */
     background-size: cover;
-    /* Ensure the background covers the entire screen */
     color: #333;
-    /* Default text color */
 }
 
-/* Container styles for the page content */
+/* Container styles with more transparency */
 .container {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Light white overlay for better contrast */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Increased transparency */
     border-radius: 10px;
-    /* Rounded corners */
     max-width: 90%;
-    /* Ensure the container fits well on any screen */
     margin: 20px auto;
-    /* Center the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Add a soft shadow for depth */
 }
 
-/* Header styling */
+/* Header styling - Prettier text */
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #444;
-    /* Slightly darker text for better readability */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Add a subtle text shadow */
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ffd6e0);
+    /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Only show gradient */
+    font-weight: bold;
 }
 
-/* Cartoon thumbnail grid */
+/* Thumbnail grid */
 .cartoons {
     display: flex;
     flex-wrap: wrap;
@@ -40,14 +44,13 @@ h1 {
     gap: 20px;
 }
 
-/* Individual cartoon block */
+/* Individual thumbnail */
 .cartoon {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     transition: transform 0.2s;
-    /* Smooth hover effect */
 }
 
 .cartoon img {
@@ -55,76 +58,64 @@ h1 {
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add shadow for depth */
     transition: transform 0.3s, box-shadow 0.3s;
-    /* Smooth transitions */
 }
 
 .cartoon img:hover {
     transform: scale(1.1);
-    /* Slight zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    /* Enhanced shadow effect */
 }
 
+/* Prettier text for captions */
 .cartoon p {
     margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #444;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
 }
 
-/* Video player modal styles */
+/* Video player modal */
 .video-player {
     display: none;
-    /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    /* Semi-transparent black background */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    /* Ensure it's above other content */
 }
 
 .video-player iframe {
     width: 90%;
     max-width: 1200px;
-    /* Set max width for large screens */
     height: 70%;
-    /* Adjust as needed */
     border: none;
-    /* Remove default iframe borders */
     transition: transform 0.3s;
-    /* Smooth transition for scaling */
 }
 
 .video-player iframe:hover {
     transform: scale(1.05);
-    /* Slight zoom effect on hover */
 }
 
 .video-player button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #ff5252;
-    /* Button color */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    /* Adjust font size for readability */
 }
 
 .video-player button:hover {
     background-color: #ff0000;
-    /* Button hover color */
 }
