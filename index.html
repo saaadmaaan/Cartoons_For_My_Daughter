@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartoons for My Daughter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>ანამარიას მულტფილმები</h1>
+    <div class="cartoons">
+      <!-- Cartoon thumbnails -->
+      <div class="cartoon" onclick="playVideo('1BZ4UJX7u4C2_KL2iP9IzCcr7n31BmOLW')">
+        <img src="thumbnails/moana.jpg" alt="Moana">
+        <p>Moana</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('1y6tTbPWN-HTBm2-gD7md6iwp-Mz_fDPb')">
+        <img src="thumbnails/cinderella.jpg" alt="Cinderella">
+        <p>Cinderella</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('FILE_ID_FOR_LIONKING')">
+        <img src="thumbnails/LionKing.jpg" alt="Lion King">
+        <p>Lion King</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('FILE_ID_FOR_BAMBI')">
+        <img src="thumbnails/bembi.jpg" alt="Bambi">
+        <p>Bambi</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('FILE_ID_FOR_SNOWWHITE')">
+        <img src="thumbnails/SnowWhite.jpg" alt="Snow White">
+        <p>Snow White</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('FILE_ID_FOR_101DALMATIANS')">
+        <img src="thumbnails/101dalmatians.jpg" alt="101 Dalmatians">
+        <p>101 Dalmatians</p>
+      </div>
+      <div class="cartoon" onclick="playVideo('FILE_ID_FOR_SLEEPINGBEAUTY')">
+        <img src="thumbnails/sleepingbeauty.jpg" alt="Sleeping Beauty">
+        <p>Sleeping Beauty</p>
+      </div>
+    </div>
+    <!-- Video player modal -->
+    <div class="video-player" id="videoPlayer">
+      <iframe id="videoIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button onclick="closeVideoPlayer()">Close</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

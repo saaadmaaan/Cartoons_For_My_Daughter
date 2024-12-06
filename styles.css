@@ -1,0 +1,130 @@
+/* General body styles with the background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('images/background.png') no-repeat center center fixed;
+    /* Background image */
+    background-size: cover;
+    /* Ensure the background covers the entire screen */
+    color: #333;
+    /* Default text color */
+}
+
+/* Container styles for the page content */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Light white overlay for better contrast */
+    border-radius: 10px;
+    /* Rounded corners */
+    max-width: 90%;
+    /* Ensure the container fits well on any screen */
+    margin: 20px auto;
+    /* Center the container */
+}
+
+/* Header styling */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    /* Slightly darker text for better readability */
+}
+
+/* Cartoon thumbnail grid */
+.cartoons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual cartoon block */
+.cartoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+}
+
+.cartoon img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
+}
+
+.cartoon img:hover {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow effect */
+}
+
+.cartoon p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Video player modal styles */
+.video-player {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent black background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+.video-player iframe {
+    width: 90%;
+    max-width: 1200px;
+    /* Set max width for large screens */
+    height: 70%;
+    /* Adjust as needed */
+    border: none;
+    /* Remove default iframe borders */
+    transition: transform 0.3s;
+    /* Smooth transition for scaling */
+}
+
+.video-player iframe:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.video-player button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5252;
+    /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Adjust font size for readability */
+}
+
+.video-player button:hover {
+    background-color: #ff0000;
+    /* Button hover color */
+}
