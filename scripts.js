@@ -8,6 +8,7 @@ function playVideo(fileId) {
 
   // Show the video player
   videoPlayer.style.display = 'flex';
+  console.log("Video player opened with file ID:", fileId);
 }
 
 // Function to close the video player
@@ -20,4 +21,11 @@ function closeVideoPlayer() {
 
   // Hide the video player
   videoPlayer.style.display = 'none';
+  console.log("Video player closed");
 }
+
+// Ensure the video player does not display on load
+document.addEventListener('DOMContentLoaded', () => {
+  const videoPlayer = document.getElementById('videoPlayer');
+  videoPlayer.style.display = 'none'; // Explicitly hide the player on page load
+});
